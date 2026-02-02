@@ -8,10 +8,11 @@ public class Task {
     private String description;
     private LocalDate dueDate;
     private Priority priority;
-    private Status status;
     private String category;
+    private Status status;
 
-    public Task(String name, String description, LocalDate dueDate, Priority priority, Status status, String category) {
+
+    public Task(String name, String description, LocalDate dueDate, Priority priority, String category, Status status) {
         this.name = name;
         this.description = description;
         this.dueDate = dueDate;
