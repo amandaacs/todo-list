@@ -25,47 +25,36 @@ public class Task {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getDescription() {
         return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public LocalDate getDueDate() {
         return dueDate;
     }
 
-    public void setDueDate(LocalDate dueDate) {
-        this.dueDate = dueDate;
-    }
-
     public Priority getPriority() {
         return priority;
-    }
-
-    public void setPriority(Priority priority) {
-        this.priority = priority;
     }
 
     public Status getStatus() {
         return status;
     }
 
-    public void setStatus(Status status) {
-        this.status = status;
-    }
-
     public String getCategory() {
         return category;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
+
+    @Override
+    public String toString() {
+        return
+            "Nome: " + name + "\n" +
+            "Descrição: " + description + "\n" +
+            "Data de término: " + dueDate + "\n" +
+            "Prioridade: " + priority + "\n" +
+            "Categoria: " + category + "\n" +
+            "Status: " + status;
     }
 }
