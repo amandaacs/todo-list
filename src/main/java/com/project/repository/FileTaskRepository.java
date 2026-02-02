@@ -11,7 +11,7 @@ import java.util.List;
 
 public class FileTaskRepository {
 
-    private static final String FILE = "tasks.csv";
+    private static final String FILE = "./tasks.csv";
 
     public List<Task> load(){
         List<Task> tasks = new ArrayList<>();
@@ -19,12 +19,15 @@ public class FileTaskRepository {
         try(var reader = FileUtils.reader(FILE)){
             String line;
             while ((line = reader.readLine()) != null){
-                String[] values = line.split(",");
+                String[] values = line.split(";");
 
                 tasks.add(new Task(
-                        values[0], values[1], LocalDate.parse(values[2]),
+                        values[0],
+                        values[1],
+                        LocalDate.parse(values[2]),
                         Priority.valueOf(values[3]),
-                        values[4], Status.valueOf(values[5])
+                        values[4],
+                        Status.valueOf(values[5])
                 ));
             }
         } catch (Exception ignored){}
@@ -41,7 +44,6 @@ public class FileTaskRepository {
                         task.getCategory(),
                         task.getDueDate().toString(),
                         task.getPriority().name(),
-                        task.getCategory(),
                         task.getStatus().name()
                         ));
                 writer.newLine();
