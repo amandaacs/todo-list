@@ -1,4 +1,4 @@
-package com.project.ui;
+package com.project.terminal_ui;
 
 import com.project.model.Priority;
 import com.project.model.Status;

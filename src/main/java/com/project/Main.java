@@ -3,7 +3,7 @@ package com.project;
 import com.project.repository.FileTaskRepository;
 import com.project.repository.TaskRepository;
 import com.project.service.TaskService;
-import com.project.ui.MenuActions;
+import com.project.terminal_ui.MenuActions;
 
 import java.util.Scanner;
 

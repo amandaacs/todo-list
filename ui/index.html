@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>To Do List</h1>
+
+    <form id="taskInput">
+
+        <input type="hidden" id="editIndex">
+
+        <input type="text" id="name" placeholder="Nome da Tarefa">
+        <input type="text" id="description" placeholder="Descrição">
+        <input type="date" id="dueDate">
+
+        <select id="priority">
+            <option value="ONE">Prioridade 1 (Mais alta)</option>
+            <option value="TWO">Prioridade 2 </option>
+            <option value="THREE">Prioridade 3 </option>
+            <option value="FOUR">Prioridade 4 </option>
+            <option value="FIVE">Prioridade 5 (Mais baixa)</option>
+        </select>
+
+        <input type="text" id="category" placeholder="Categoria">
+
+        <select id="status">
+        <option value="TODO">To Do</option>
+        <option value="DOING">Em Progresso</option>
+        <option value="DONE">Concluída</option>
+
+</select>
+
+        <button type="button" onclick="saveTask()">Salvar</button>
+
+    </form>
+
+    <section id="filter">
+
+        <select id="statusFilter">
+
+            <option value="">Todas</option>
+            <option value="TODO">To Do</option>
+            <option value="DOING">Em Progresso</option>
+            <option value="DONE">Concluídas</option>
+
+        </select>
+
+    </section>
+    
+    <section>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Categoria</th>
+                    <th>Prioridade</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="taskList">
+
+            </tbody>
+        </table>
+
+    </section>
+
+    <!-- scripts -->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
